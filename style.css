@@ -1,0 +1,500 @@
+/* Base styles */
+body {
+    font-family: sans-serif; /* Changed to just sans-serif for consistency */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: black; /* Background color for the body */
+    color: white; /* Default text color */
+}
+
+header {
+    background: linear-gradient(90deg, #000428, #004e92); /* Gradient background */
+    padding: 10px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #436ccd;
+}
+
+.logo {
+    height: 50px;
+    width: auto;
+}
+
+/* Hero Section */
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    background-color: black; /* Keeps the black background */
+    color: white;
+}
+
+.hero-content {
+    max-width: 50%;
+    font-family: 'Cursive', serif; 
+}
+
+.hero-content h1, .hero-content p {
+    font-family: 'Cursive', serif; 
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+}
+
+.hero-image-container {
+    position: relative;
+}
+
+.hero-image-container::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background-color: rgb(156, 24, 24); /* White splash background */
+    z-index: -1;
+    border-radius: 10px; /* Adds rounded corners to the white splash */
+}
+
+.hero-image {
+    max-width: 45%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Welcome and Intro Styles */
+.welcome-title, .intro {
+    font-family: 'Cursive', serif;
+}
+
+.highlight {
+    color: rgb(114, 114, 8);
+}
+
+#about, #projects, #contact {
+    padding: 20px;
+}
+
+/* Project styles */
+#projects {
+    padding: 20px;
+}
+
+.project-item {
+    border: 2px solid #004e92;
+    border-radius: 8px;
+    margin: 20px 0;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.project-description {
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #5a1f1f;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Contact form */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+    text-align: center;
+}
+
+form label {
+    margin-top: 10px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    margin-top: 10px;
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #555;
+}
+
+#contact h1 {
+    text-align: center; /* Centers the heading */
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* About Me Section */
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    background-color: white;
+    color: black;
+}
+
+.about-container {
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 900px;
+    width: 100%;
+}
+
+.about-image img {
+    border-radius: 10px;
+    width: 300px;
+    height: auto;
+    margin-right: 30px;
+    object-fit: cover;
+}
+
+.about-content h1 {
+    font-size: 2.5rem;
+    color: black;
+}
+
+.about-content p {
+    font-size: 1.2rem;
+    color: black;
+    margin-bottom: 15px;
+}
+
+video {
+    display: block;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: 2px solid white;
+    background-color: rgb(85, 70, 70);
+}
+
+/* Projects Title */
+#projects h1 {
+    text-align: center;
+    color: #3c3535;
+    font-size: 2.5rem;
+    font-family: 'Cursive', serif;
+    margin-bottom: 30px;
+    background-color: white;
+}
+
+/* Projects Grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjusts for different screen sizes */
+    gap: 25px;
+}
+
+.project-item {
+    background: rgba(238, 233, 233, 0.7);
+    padding: 15px;
+    border-radius: 8px;
+    border: 2px solid #0f0f0f;
+    text-align: center;
+    overflow: hidden;
+}
+
+.project-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.project-description {
+    border: 2px solid rgb(241, 237, 237);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.project-item h2 {
+    margin-top: 10px;
+    font-size: 1.5rem;
+}
+
+.project-item p {
+    font-size: 1rem;
+    color: #333; /* Changed for better readability */
+}
+
+
+/* Centering content */
+#centered-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    text-align: center;
+    color: white;
+    font-family: sans-serif;
+    background: black;
+}
+
+#centered-content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #fff; /* White text color */
+}
+
+#centered-content p {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling the Header */
+header {
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+
+/* Navigation styling */
+nav {
+    position: relative;
+}
+
+/* Styling the hamburger icon */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* The navigation links container (ul) */
+#nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    transition: all 0.3s ease-in-out;
+}
+
+#nav-links li {
+    margin: 0 15px;
+}
+
+#nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Mobile view (below 768px) */
+@media (max-width: 767px) {
+    /* Hide the nav links by default on mobile */
+    #nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        padding: 20px;
+    }
+
+    /* When the hamburger menu is clicked, show the nav links */
+    #nav-links.active {
+        display: flex;
+    }
+
+    /* Show hamburger icon on mobile */
+    .hamburger {
+        display: block;
+    }
+
+    /* Styling the nav links for mobile */
+    #nav-links li {
+        margin: 10px 0;
+        text-align: center;
+    }
+}
+
+/* Laptop and larger screens */
+@media (min-width: 768px) {
+    /* On larger screens, display the nav links horizontally */
+    #nav-links {
+        display: flex;
+        flex-direction: row;
+    }
+
+    /* Hide the hamburger icon on larger screens */
+    .hamburger {
+        display: none;
+    }
+}
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling the Header */
+header {
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+
+/* Sticky Navigation */
+nav {
+    position: sticky;
+    top: 0; /* This ensures the navbar sticks to the top of the screen */
+    z-index: 1000; /* Makes sure the navbar stays on top of other content */
+    background-color: #333; /* Same as header background */
+    padding: 10px 0; /* Optional: space around the navbar */
+    box-shadow: 0 4px 2px -2px gray; /* Optional: add shadow for effect */
+}
+
+/* Navigation styling */
+#nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+#nav-links li {
+    margin: 0 15px;
+}
+
+#nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Hamburger Icon */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* Mobile view (below 768px) */
+@media (max-width: 767px) {
+    #nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        padding: 20px;
+    }
+
+    #nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    #nav-links li {
+        margin: 10px 0;
+        text-align: center;
+    }
+}
+
+/* Laptop and larger screens */
+@media (min-width: 768px) {
+    #nav-links {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .hamburger {
+        display: none;
+    }
+}
